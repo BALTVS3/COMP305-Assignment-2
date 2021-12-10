@@ -15,7 +15,7 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y >= 1) 
+        if (gameObject.transform.position.y >= 2) 
         {
             yDir = -1;
         }
