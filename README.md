@@ -6,4 +6,4 @@ Realized now that the Unity Project is called "New Unity Project".
 Crying.
 
 
-Current Platforms: Floating
+Current Platforms: Floating, Moving (Unsticking), Bouncy
