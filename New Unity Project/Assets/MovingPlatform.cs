@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     private Rigidbody2D body;
-    private int yDir = 1;
+    public float yDir = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +17,13 @@ public class MovingPlatform : MonoBehaviour
     {
         if (gameObject.transform.position.y >= 2) 
         {
-            yDir = -1;
+            yDir = -1f;
         }
 
         if (gameObject.transform.position.y <= -2)
         {
-            yDir = 1;
+            yDir = 1f;
         }
-        body.velocity = new Vector2(0, 1f * yDir);
+        body.velocity = new Vector2(0, yDir);
     }
 }

@@ -15,8 +15,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float xAxis = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(xAxis * 5f, body.velocity.y);
+
         if ((xAxis < 0) && (transform.localScale.x == 0.05f))
         {
             gameObject.transform.localScale -= new Vector3(0.1f, 0, 0);
@@ -26,10 +28,11 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale += new Vector3(0.1f, 0, 0);
         }
 
-        if ((Input.GetButtonDown("Jump")) && (body.velocity.y == 0f || isOnPlatform)) // && body.velocity.y == 0f 
+        if ((Input.GetButtonDown("Jump")) && (body.velocity.y == 0f || isOnPlatform))
         {
             body.velocity = new Vector2(body.velocity.x, 5f);
         }
+
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -38,6 +41,11 @@ public class Player : MonoBehaviour
         {
             isOnPlatform = true;
         }
+        else if (col.gameObject.tag == "MovingPlatform")
+        {
+            isOnPlatform = true;
+            transform.SetParent(col.transform);
+        }
     }
 
     void OnCollisionExit2D(Collision2D col)
@@ -45,6 +53,11 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag == "Platform")
         {
             isOnPlatform = false;
+        }
+        else if (col.gameObject.tag == "MovingPlatform")
+        {
+            isOnPlatform = false;
+            transform.SetParent(null);
         }
     }
 }

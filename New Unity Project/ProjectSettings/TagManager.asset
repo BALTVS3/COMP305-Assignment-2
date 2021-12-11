@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flooring
   - Platform
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
