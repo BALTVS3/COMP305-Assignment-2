@@ -5,19 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col) // When Player reaches the Exit door, You Win! (Could be done with Triggers, I admit I was lazy at this point.)
     {
         if (col.gameObject.tag == "Player")
         {

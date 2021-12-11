@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    private Rigidbody2D body;
-    public float yDir = 1;
+    private Rigidbody2D body; // Create a variable to contain the Rigidbody to susequently use for all movements.
+    private float yDir = 1; // Create a float for determining Platform Direction (Not exactly the way you did Platform Movements w/ PingPong, just set 2 Limited areas and had them move between the 2. PingPong's probably more condense, but oh well.)
     // Start is called before the first frame update
     void Start()
     {
