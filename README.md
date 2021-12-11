@@ -5,4 +5,4 @@ Basic Assets used for simplicity's sake.
 Realized that the Unity Project is called "New Unity Project". Crying.
 
 
-Current Platforms: Floating, Moving (Unsticking), Bouncy, Swinging
+Current Platforms: Floating, Moving (Unsticking), Bouncy, Tilting, Swinging, Collapsing.
